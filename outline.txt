@@ -1,0 +1,12 @@
+How To Create Drag and Drop File Uploads in React with react-dropzone
+    react-dropzone is an HTML5-compliant React component for handling the dragging and dropping of files.
+
+Step 1 — Setting Up the Project
+    npx create-react-app client
+    cd client - npm install react-dropzone
+
+Step 2 — Adding the Dropzone Component
+    
+
+
+
