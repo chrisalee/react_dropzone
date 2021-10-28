@@ -6,7 +6,31 @@ Step 1 — Setting Up the Project
     cd client - npm install react-dropzone
 
 Step 2 — Adding the Dropzone Component
-    
+    react-dropzone has default settings that allow you to add it with minimal configuration.
+    At a minimum, you will need an onDrop property that will handle the dropped files and some call-to-action text to help limit any user confusion
+    This code provides drag and drop functionality for your application.
+    Note: It is worth noting that even though react-dropzone is designed to drag and drop files, it does accept click events to the dropzone by default which will launch a dialog for file selection.
+
+    Run your application and observe it in a web browser. You should see a div with the text: Drag and drop your images here.
+    Experiment with dragging and dropping various files to the React Dropzone component. The code currently uses a console.log to display the files. The information from uploaded files includes name, lastModified, size, and type.
+    At this point, you have a working React Dropzone component with the default configuration. The react-dropzone documentation additional configuration options.
+
+Step 3 — Styling the Dropzone Component
+    By default, the react-dropzone will have no styles. The documentation provides styles for a common appearance that uses a combination of flexbox and dashed borders to indicate to users an area to drag and drop files.
+    react-dropzone also supports props for when the component is actively interacted with (isDragActive), accepted the file (isDragAccept), or rejected the file (isDragReject).
+    Revisit your DropzoneComponent and modify it to use isDragActive, isDragAccept, and isDragReject when applied to JPEG and PNG image file types
+
+    Changing the appearance of the component for acceptions and rejections can help provide feedback to the user on whether or not their file is valid.
+
+Step 4 — Adding Image Previews
+    A preview is a copy of the image that is dragged and dropped in the component. This is helpful to provide visual feedback to the user to verify the contents of the image file they selected.
+    Revisit your DropzoneComponent and modify it to use preview
+    Note: To avoid memory leaks, you will need to call URL.revokeObjectURL(file.preview) to avoid storing the preview unnecessarily.
+    Now whenever a file (or files) has been dropped, the file will be appended to the state and a preview will be displayed.
+
+
+
+
 
 
 
