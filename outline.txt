@@ -10,3 +10,21 @@ Step 2 — Adding the Dropzone Component
 
 
 
+
+
+
+const climbingLeaderboard = (ranked, player) => {
+    let playerRankings = [];
+    let uniqueRanks = ranked.filter((x, index) => ranked.indexOf(x) === index);
+    
+    for(let i = 0; i < player.length; i++) {
+        uniqueRanks.push(player[i]);
+        uniqueRanks.sort((a, b) => b - a);
+        let playerRank = uniqueRanks.indexOf(player[i]) + 1;
+        playerRankings.push(playerRank);  
+    }
+    console.log(playerRankings)
+    return playerRankings;
+}
+
+
